@@ -8,7 +8,7 @@ export class SaludoPresentador {
     while (true) {
       const nombre = this.vista.pedirNombre();
 
-      if (nombre.toLowerCase() === "salir") {
+      if (nombre.toLowerCase() === "salir" || nombre.toLowerCase() === "adios" || nombre.toLowerCase() === "chao" || nombre.toLowerCase() === "bye") {
         this.vista.mostrarSaludo("¡Adios!");
         break;
       }
