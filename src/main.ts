@@ -1,9 +1,9 @@
-import { SaludoModel } from "./modelo";
-import { ConsolaSaludoView } from "./vista";
-import { SaludoPresenter } from "./presentador";
+import { SaludoModelo } from "./modelo";
+import { ConsolaSaludoVista } from "./vista";
+import { SaludoPresentador } from "./presentador";
 
-const model = new SaludoModel();
-const view = new ConsolaSaludoView();
-const presenter = new SaludoPresenter(model, view);
+const modelo = new SaludoModelo();
+const vista = new ConsolaSaludoVista();
+const presentador = new SaludoPresentador(modelo, vista);
 
-presenter.iniciar();
+presentador.iniciar();

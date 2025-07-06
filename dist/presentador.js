@@ -1,22 +1,22 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SaludoPresenter = void 0;
-class SaludoPresenter {
-    constructor(model, view) {
-        this.model = model;
-        this.view = view;
+exports.SaludoPresentador = void 0;
+class SaludoPresentador {
+    constructor(modelo, vista) {
+        this.modelo = modelo;
+        this.vista = vista;
     }
     iniciar() {
         while (true) {
-            const nombre = this.view.pedirNombre();
+            const nombre = this.vista.pedirNombre();
             if (nombre.toLowerCase() === "salir") {
-                this.view.mostrarSaludo("¡Hasta luego!");
+                this.vista.mostrarSaludo("¡Adios!");
                 break;
             }
-            this.model.setNombre(nombre);
-            const saludo = `¡Hola, ${this.model.getNombre()}!`;
-            this.view.mostrarSaludo(saludo);
+            this.modelo.setNombre(nombre);
+            const saludo = `¡Hola buenas, ${this.modelo.getNombre()}!`;
+            this.vista.mostrarSaludo(saludo);
         }
     }
 }
-exports.SaludoPresenter = SaludoPresenter;
+exports.SaludoPresentador = SaludoPresentador;

@@ -1,4 +1,4 @@
-export class SaludoModel {
+export class SaludoModelo {
   private nombre: string = "";
 
   setNombre(nombre: string): void {

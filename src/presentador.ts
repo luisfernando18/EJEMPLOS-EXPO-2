@@ -1,21 +1,21 @@
-import { SaludoModel } from "./modelo";
-import { ISaludoView } from "./vista";
+import { SaludoModelo } from "./modelo";
+import { ISaludoVista } from "./vista";
 
-export class SaludoPresenter {
-  constructor(private model: SaludoModel, private view: ISaludoView) {}
+export class SaludoPresentador {
+  constructor(private modelo: SaludoModelo, private vista: ISaludoVista) {}
 
   iniciar(): void {
     while (true) {
-      const nombre = this.view.pedirNombre();
+      const nombre = this.vista.pedirNombre();
 
       if (nombre.toLowerCase() === "salir") {
-        this.view.mostrarSaludo("¡Hasta luego!");
+        this.vista.mostrarSaludo("¡Adios!");
         break;
       }
 
-      this.model.setNombre(nombre);
-      const saludo = `¡Hola, ${this.model.getNombre()}!`;
-      this.view.mostrarSaludo(saludo);
+      this.modelo.setNombre(nombre);
+      const saludo = `¡Hola buenas, ${this.modelo.getNombre()}!`;
+      this.vista.mostrarSaludo(saludo);
     }
   }
 }

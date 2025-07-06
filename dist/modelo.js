@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SaludoModel = void 0;
-class SaludoModel {
+exports.SaludoModelo = void 0;
+class SaludoModelo {
     constructor() {
         this.nombre = "";
     }
@@ -12,4 +12,4 @@ class SaludoModel {
         return this.nombre;
     }
 }
-exports.SaludoModel = SaludoModel;
+exports.SaludoModelo = SaludoModelo;
