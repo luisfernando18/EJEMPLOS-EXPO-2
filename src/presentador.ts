@@ -9,7 +9,7 @@ export class SaludoPresentador {
       const nombre = this.vista.pedirNombre();
 
       if (nombre.toLowerCase() === "salir" || nombre.toLowerCase() === "adios" || nombre.toLowerCase() === "chao" || nombre.toLowerCase() === "bye") {
-        this.vista.mostrarSaludo(`¡Adios! (El totalde saludos fue: ${this.modelo.getcontador()})`);
+        this.vista.mostrarSaludo(`¡Adios! (El total de saludos fue: ${this.modelo.getcontador()})`);
         break;
       }
 
